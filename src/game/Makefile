@@ -33,7 +33,7 @@ SDLCONF_L := $(shell ${SDL_CONF} --libs)
 # the compiler options
 
 CC      := gcc
-INC     := -I. -I.. -I../enet/include ${SDLCONF_I} -I./extensions -I./file_formats -I./platform
+INC     := -I. -I.. -I../enet/include ${SDLCONF_I} -I./extensions -I./file_formats -I./platform -lm
 LDFLAGS := ${SDLCONF_L} -L../enet/lib -lSDL_ttf -lSDL_mixer -lGL -lGLU -lSDL_image -lphysfs -lenet
 
 # use different options if the environmental variable PREFIX is defined
